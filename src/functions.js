@@ -24,6 +24,8 @@
  */
 
 const yelling = words => {
+  yelledWords = words.map(word => word.toUpperCase())
+  return yelledWords
   // Your code here
 }
 
@@ -36,6 +38,10 @@ const yelling = words => {
  * NOTE: You may *not* use the `forEach` or `for` method.
  *
  */
+const doubleTrouble = numbers => {
+  doubleTheNumbers = numbers.map(number => number * 2)
+  return doubleTheNumbers
+}
 
 // ...
 
@@ -47,6 +53,10 @@ const yelling = words => {
  * NOTE: You may *not* use the `forEach` or `for` method.
  *
  */
+const stringyIndexes = words => {
+  stringsAtX = words.map((word, index) => `${word} is at index ${index}`)
+  return stringsAtX
+}
 
 // ...
 
@@ -57,6 +67,10 @@ const yelling = words => {
  * NOTE: You may *not* use the `forEach` or `for` method.
  *
  */
+const onlyTheEvenSurvive = numbers => {
+  evenNumbers = numbers.filter(number => number % 2 === 0)
+  return evenNumbers
+}
 
 // ...
 
@@ -67,6 +81,10 @@ const yelling = words => {
  * NOTE: You may *not* use the `forEach` or `for` method.
  *
  */
+const onlyTheEvenIndexedSurvive = numbers => {
+  evenIndexes = numbers.filter((number, index) => index % 2 === 0)
+  return evenIndexes
+}
 
 // ...
 
@@ -86,7 +104,13 @@ const yelling = words => {
  * NOTE: You may *not* use the `forEach` or `for` method.
  *
  */
-
+const bestMoviesOfTheYear = (movies, year) => {
+  const movieNumbers = movies
+    .filter(movie => movie.score > 90 && movie.year === year)
+    .map(movieNumbers => movieNumbers.name)
+  // const movieNames = movieNumbers.
+  return movieNumbers
+}
 // ...
 
 /*
@@ -97,6 +121,10 @@ const yelling = words => {
  * NOTE: You may *not* use the `forEach` or `for` method.
  *
  */
+const everyoneIsOdd = numbers => {
+  oddNumbers = numbers.every(number => number % 2 != 0)
+  return oddNumbers
+}
 
 // ...
 
@@ -108,6 +136,10 @@ const yelling = words => {
  * NOTE: You may *not* use the `forEach` or `for` method.
  *
  */
+const findTheNeedle = sentences => {
+  wordNeedle = sentences.find(sentence => sentence.includes('needle'))
+  return wordNeedle
+}
 
 // ...
 
@@ -119,6 +151,10 @@ const yelling = words => {
  * NOTE: You may *not* use the `forEach` or `for` method.
  *
  */
+const findTheNeedleIndex = sentences => {
+  needleIndex = sentences.findIndex(sentence => sentence.includes(`needle`))
+  return needleIndex
+}
 
 // ...
 
@@ -130,6 +166,10 @@ const yelling = words => {
  * NOTE: You may *not* use the `forEach` or `for` method.
  *
  */
+const someoneToLove = words => {
+  const oneTrueLove = words.some(word => word.length == 4)
+  return oneTrueLove
+}
 
 // ...
 
@@ -166,10 +206,15 @@ const yelling = words => {
  *
  */
 
-// function objectKeys(objectOfHobbies) {
-//   // Your code here
-// }
-
+function objectKeys(objectOfHobbies) {
+  //   // Your code here
+  //
+  const keys = Object.keys(myHobbies)
+  const answer = keys.map(key => {
+    const hobby = myHobbies[key]
+    return `${key} - ${hobby.title}`
+  })
+}
 // ...
 
 /**

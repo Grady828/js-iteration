@@ -209,11 +209,12 @@ const someoneToLove = words => {
 function objectKeys(objectOfHobbies) {
   //   // Your code here
   //
-  const keys = Object.keys(myHobbies)
+  const keys = Object.keys(objectOfHobbies)
   const answer = keys.map(key => {
-    const hobby = myHobbies[key]
+    const hobby = objectOfHobbies[key]
     return `${key} - ${hobby.title}`
   })
+  return answer
 }
 // ...
 
